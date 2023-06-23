@@ -2,6 +2,7 @@ import './globals.css'
 
 import Navbar from "@/ui/Navbar";
 import Sidebar from "@/ui/Sidebar";
+import ProvidersWrapper from "@/app/ProvidersWrapper";
 
 export const metadata = {
     title: 'Create Next App',
@@ -16,15 +17,17 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body>
-        <Navbar/>
-        <div className={"flex gap-6 md:gap-20"}>
-            <div className={"h-[92vh] overflow-hidden xl:overflow-auto"}>
-                <Sidebar/>
+        <ProvidersWrapper>
+            <Navbar/>
+            <div className={"flex gap-6 md:gap-20"}>
+                <div className={"h-[92vh] overflow-hidden xl:overflow-auto"}>
+                    <Sidebar/>
+                </div>
+                <div className={"mt-4 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1"}>
+                    {children}
+                </div>
             </div>
-            <div className={"mt-4 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1"}>
-                {children}
-            </div>
-        </div>
+        </ProvidersWrapper>
         </body>
         </html>
     )
