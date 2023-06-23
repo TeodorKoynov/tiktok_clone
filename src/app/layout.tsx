@@ -24,7 +24,9 @@ export default function RootLayout({
                     <Sidebar/>
                 </div>
                 <div className={"mt-4 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1"}>
-                    {children}
+                    <main>
+                        {children}
+                    </main>
                 </div>
             </div>
         </ProvidersWrapper>
