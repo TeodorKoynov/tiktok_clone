@@ -6,7 +6,7 @@ const List = ({items, mt}: { items: string[], mt: boolean }) => (
             <p key={item} className={"text-gray-400 text-sm hover:underline cursor-pointer"}>
                 {item}
             </p>
-        ))}}
+        ))}
     </div>
 )
 
