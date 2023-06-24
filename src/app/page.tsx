@@ -8,7 +8,6 @@ export default async function Home() {
 
     console.log("Res", videos)
 
-
     return (
         <div className={"flex flex-col gap-10 videos h-full"}>
             {videos.length ? videos.map((video: Video) => (

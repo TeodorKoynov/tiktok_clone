@@ -9,3 +9,13 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(data, {status: 200})
 }
+
+export async function POST(request: NextRequest) {
+    const post = await request.json();
+
+    console.log("Post", post)
+
+    client.create(post).then(() => NextResponse.json({message: 'Video Created'}, {status: 201}))
+
+    return NextResponse.json('Video Created', {status: 200})
+}
