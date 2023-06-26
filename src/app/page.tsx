@@ -2,9 +2,10 @@ import axios from "axios";
 import VideoCard from "@/components/VideoCard";
 import {Video} from "@/types"
 import NoResults from "@/components/NoResults";
+import {BASE_URL} from "@/utils";
 
 export default async function Home() {
-    const {data: videos}: { data: Video[] } = await axios.get(`http://localhost:3000/api/post`);
+    const {data: videos}: { data: Video[] } = await axios.get(`${BASE_URL}/api/post`);
 
     console.log("Res", videos)
 
