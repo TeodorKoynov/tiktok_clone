@@ -52,7 +52,7 @@ const Comments = ({comment, setComment, addComment, isPostingComment, comments}:
                                                         <GoVerified className={"text-blue-400"}/>
                                                     </p>
                                                     <p className={"capitalize text-gray-400 text-xs"}>
-                                                        {user.userName};
+                                                        {user.userName}
                                                     </p>
                                                 </div>
                                             </div>
