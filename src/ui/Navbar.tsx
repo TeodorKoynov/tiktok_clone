@@ -1,21 +1,22 @@
 "use client"
 
+import {useEffect, useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {useRouter} from "next/navigation";
 
 import {GoogleLogin, googleLogout} from "@react-oauth/google";
 
+import useAuthStore from "@/store/authStore";
+import {createOrGetUser} from "@/utils";
+
+import {IUser} from "@/types";
+
 import {AiOutlineLogout} from "react-icons/ai";
 import {BiSearch} from "react-icons/bi";
 import {IoMdAdd} from "react-icons/io";
 
-import useAuthStore from "@/store/authStore";
-
 import Logo from "../../public/tiktik-logo.png";
-import {createOrGetUser} from "@/utils";
-import {useEffect, useState} from "react";
-import {IUser} from "@/types";
 
 const Navbar = () => {
     const [user, setUser] = useState<IUser | null>(null);
